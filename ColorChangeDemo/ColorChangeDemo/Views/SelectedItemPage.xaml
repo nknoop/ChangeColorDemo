@@ -23,7 +23,7 @@
                         <Button 
                             x:Name="Button"
                             Text="{Binding Id}" 
-                            BackgroundColor="{Binding Source={x:Reference ListView}, Path=BindingContext.SelectedItem, Converter={StaticResource equalityToColorConverter}, ConverterParameter={Binding Source={x:Reference Button}, Path=BindingContext}}"
+                            BackgroundColor="{Binding Source={x:Reference ListView}, Path=BindingContext.SelectedItem, Converter={StaticResource equalityToColorConverter}, ConverterParameter={Binding Source={x:Reference Button}}}"
                             Command="{Binding Source={x:Reference ListView}, Path=BindingContext.ItemTappedCommand}"
                             CommandParameter="{Binding .}"/>
                     </ViewCell>

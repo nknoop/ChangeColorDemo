@@ -17,9 +17,9 @@ namespace ColorChangeDemo.Converters
             if (value == null || parameter == null)
                 return InequalityColor;
 
-            if (parameter is Binding binding && binding.Source is Button button)
+            if (parameter is Binding binding && binding.Source is View view)
             {
-                parameter = button.BindingContext;
+                parameter = view.BindingContext;
             }
 
             return value == parameter ? EqualityColor : InequalityColor;
